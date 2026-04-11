@@ -22,8 +22,9 @@ jobs:
         run: |
           pip install requests pandas streamlit-gsheets pytz
 
-      - name: Ejecutar el script de aviso
-        env:
+     - name: Instalar dependencias
+        run: |
+          pip install requests pandas pytz
           # Aquí conectamos tus secretos de GitHub
           TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
           GSHEETS_URL: ${{ secrets.GSHEETS_URL }}
